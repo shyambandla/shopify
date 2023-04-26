@@ -17,7 +17,7 @@ function App() {
                     defaultView="list"
                     imageSearchEndpoint="http://localhost:3001/search_by_image"
                     searchEndpoint="http://localhost:3001/search"
-                    searchKeyword="Sneakers"
+                    searchKeyword="MSI"
                 />
   </>
   );

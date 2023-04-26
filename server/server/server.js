@@ -61,7 +61,7 @@ const keywordSearch = async (keywordSearchOptions) => {
     if (tokenResponse && tokenResponse.access_token) {
         let keywordSearchURL =
             keywordSearchOptions.searchURL ||
-            `https://api.ebay.com/buy/browse/v1/item_summary/search?q=${searchTerm}&limit=${limit}`;
+            `https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=${searchTerm}&limit=${limit}`;
 
         // If sort query parameter is provided as a part of options
         keywordSearchURL =
@@ -114,7 +114,7 @@ const imageSearch = async (imageSearchOptions) => {
     if (tokenResponse && tokenResponse.access_token) {
         let imageSearchURL =
             imageSearchOptions.searchURL ||
-            `https://api.ebay.com/buy/browse/v1/item_summary/search_by_image?limit=${limit}`;
+            `https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search_by_image?limit=${limit}`;
 
         // If sort query parameter is provided as a part of options
         imageSearchURL =
