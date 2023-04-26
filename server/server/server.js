@@ -28,10 +28,11 @@ const app = express();
 const router = express.Router();
 
 const PORT = process.env.PORT || 3001;
+console.log(`Port: ${options.CLIENT_ID}`);
 const ebayAuthToken = new EbayAuthToken({
     clientId: options.CLIENT_ID,
     clientSecret: options.CLIENT_SECRET,
-    env: options.ENVIRONMENT,
+    env: "SANDBOX",
     redirectUri: ''
 });
 
@@ -41,7 +42,7 @@ app.use(express.urlencoded({ limit: '50mb' }));
 
 const getAppToken = async () => {
     try {
-        const token = await ebayAuthToken.getApplicationToken('PRODUCTION');
+        const token = await ebayAuthToken.getApplicationToken('SANDBOX');
         return token && JSON.parse(token);
     } catch (error) {
         console.error(error);
